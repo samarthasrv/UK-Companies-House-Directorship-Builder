@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Directorship Builder</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Directorship Builder</h1>
+    <p class="hint">
+      Paste a Companies House officer appointments link, then get a table of (Company, Appointment).
+    </p>
+
+    <form id="form" class="card">
+      <label for="url">Companies House officer appointments link</label>
+      <input id="url" type="url" required
+        placeholder="https://find-and-update.company-information.service.gov.uk/officers/<OFFICER_ID>/appointments" />
+
+      <label class="checkbox">
+        <input id="activeOnly" type="checkbox" />
+        Only active appointments
+      </label>
+
+      <button type="submit">Build table</button>
+    </form>
+
+    <div id="status" class="status" style="display:none;"></div>
+
+    <div id="results" style="display:none;">
+      <div class="row">
+        <h2>Results</h2>
+        <button id="copyBtn" type="button">Copy table (Excel/Sheets)</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Appointment</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
