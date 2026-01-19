@@ -1,5 +1,5 @@
 // 1) After you create the Worker (Step 3), paste its URL here:
-const WORKER_ENDPOINT = "PASTE_YOUR_WORKER_URL_HERE"; // e.g. https://directorship-proxy.YOURNAME.workers.dev
+const WORKER_ENDPOINT = "https://uk-companies-house-directorship-builder.samarthasrv.workers.dev/"; // e.g. https://directorship-proxy.YOURNAME.workers.dev
 
 const form = document.getElementById("form");
 const statusBox = document.getElementById("status");
